@@ -1,11 +1,19 @@
 {% extends 'core/base.html' %}
+{% load static %}
 {% block title %}Contacto{% endblock %}
+{% block background %}{% static 'core/img/contact-bg.jpg' %}{% endblock %}
+{% block headers %}
+    <h1>Contacto</h1>
+    <span class="subheading">Redes Sociales</span>
+{% endblock %}
 {% block content %}
-    <h2>Contacto</h2>
-    <p>Aquí os dejo mi email y mis redes sociales:</p>
-    <ul>
-        <li><a href="mailto:hola@hektorprofe.net">Email</a></li>
-        <li><a href="https://github.com/hcosta">Github</a></li>
-        <li><a href="https://youtube.com">Youtube</a></li>
-    </ul>
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <p>Si te interesa conocer más sobre mis proyectos, mis estudios o si tienes alguna propuesta de colaboración, no dudes en ponerte en contacto conmigo. Estaré encantada de responder a tus preguntas y compartir más sobre mi trabajo</p>
+        <p><b>Teléfono:</b> +34 640 222 901</p>
+        <p><b>LinkedIn: </b><a href="https://www.linkedin.com/in/luciacantos/" target="_blank" style="text-decoration: none;">Lucia Cantos Burgos</a></p>
+        <p><b>GitHub: </b> <a href="https://github.com/luciacantos" target="_blank" style="text-decoration: none;">@luciacantos</a></p>
+        <p><b>Correo electrónico: </b> <a href="mailto: lcantbur@myuax.com" target="_blank">lcantbur@myuax.com</a></p>
+    </div>
+</div>
 {% endblock %}

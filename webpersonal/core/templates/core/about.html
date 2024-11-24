@@ -1,6 +1,20 @@
 {% extends 'core/base.html' %}
+{% load static %}
 {% block title %}Acerca de{% endblock %}
+{% block background %}{% static 'core/img/about.jpg' %}{% endblock %}
+{% block headers %}
+    <h1>Acerca de</h1>
+    <span class="subheading">Biografía</span>
+{% endblock %}
 {% block content %}
-    <h2>Acerca de</h2>
-    <p>Me llamo Héctor y me encanta Django!</p>
+<div class="row">
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid avatar"
+            src="{% static 'core/img/minilucia-bg.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading">Un poco sobre mi</h2>
+        <p> Soy estudiante de Ingeniería Matemática con experiencia en programación en Python y análisis de datos. Me interesa aplicar mis conocimientos en Machine Learning para resolver problemas y desarrollar soluciones eficaces. Estoy enfocada en mejorar mis habilidades técnicas y en encontrar formas innovadoras de abordar retos, siempre buscando aprender y crecer en el proceso.</p>    
+    </div>
+</div>
 {% endblock %}

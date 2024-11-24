@@ -1,7 +1,27 @@
-
 {% extends 'core/base.html' %}
 {% block title %}Portafolio{% endblock %}
+{% load static %}
+{% block background %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock %}
+{% block headers %}
+    <h1>Portafolio</h1>
+    <span class="subheading">Currículo</span>
+{% endblock %}
 {% block content %}
-    <h2>Portafolio</h2>
-    <p>Algunos de mis trabajos.</p>
+    <p style="font-size: 20px; text-align: justify;">A lo largo de mi formación y proyectos personales, he tenido la oportunidad de trabajar en diversas iniciativas que combinan mis conocimientos en programación, análisis de datos y machine learning. En cada uno de estos proyectos, busco aplicar soluciones innovadoras y eficientes, aprendiendo y adaptándome a nuevas tecnologías. A través de estos proyectos, he desarrollado habilidades tanto en el análisis de datos como en el desarrollo de aplicaciones web, lo que me permite abordar retos complejos y ofrecer soluciones prácticas y efectivas. Aquí comparto algunos de los trabajos que reflejan mi enfoque en la mejora continua y la excelencia técnica.</p>
+
+{% for project in projects %}
+    <!-- Proyecto -->
+    <div class="row project">
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+            <img class="img-fluid" src="{{project.image}}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading title">{{project.title}}</h2>
+            <p>{{project.description}}</p>
+            {% if project.link %}
+                <p><a href="{{project.link}}">Más información</a></p>
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
 {% endblock %}

@@ -1,6 +1,15 @@
 {% extends 'core/base.html' %}
-
+{% load static %}
+{% block title %}Portada{% endblock %}
+{% block background %}{% static 'core/img/home-bg.jpg' %}{% endblock %}
 {% block content %}
-    <h2>Mi web personal</h2>
-    <p>Bienbenidos.</p>
+ <p style="font-size: 20px; text-align: justify;">¡Hola! 👋 Soy Lucía, una estudiante universitaria apasionada por el aprendizaje constante y el descubrimiento de nuevas ideas. Me encanta enfrentar retos, explorar temas que despiertan mi curiosidad y crecer tanto personal como profesionalmente.
+
+    En este espacio, comparto un poco sobre mí y los proyectos que reflejan mi esfuerzo y dedicación. Mi objetivo es seguir aprendiendo, contribuir con mi trabajo y conectar con personas que comparten intereses similares.
+    
+    ¡Gracias por visitar mi página! 😊 </p>
+{% endblock %}
+{% block headers %}
+ <h1>Lucía Cantos Burgos</h1>
+ <span class="subheading">Ingeniera Matemática</span>
 {% endblock %}
